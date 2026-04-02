@@ -1,0 +1,19 @@
+{
+  "name": "fastly-tls-flexi-repro-standalone",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Standalone Fastly TLS flexi/strict repro",
+  "scripts": {
+    "serve": "fastly compute serve --debug-mode",
+    "run:repro": "./run-repro.sh"
+  },
+  "dependencies": {
+    "@fastly/js-compute": "3.40.1"
+  },
+  "devDependencies": {
+    "@fastly/cli": "14.2.0",
+    "webpack": "5.99.9",
+    "webpack-cli": "5.1.4"
+  }
+}

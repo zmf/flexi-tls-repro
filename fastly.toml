@@ -1,0 +1,10 @@
+# Standalone Fastly Compute repro for TLS flexi/strict behavior.
+authors = ["john@pressidium.com"]
+description = "Standalone TLS flexi repro"
+language = "javascript"
+manifest_version = 3
+name = "fastly-tls-flexi-repro"
+service_id = "0000000000000000000000"
+
+[scripts]
+build = "npx webpack --config webpack.config.cjs && npx js-compute-runtime --enable-aot build/index.js bin/main.wasm"
