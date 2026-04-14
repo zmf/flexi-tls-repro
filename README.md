@@ -32,6 +32,9 @@ It creates dynamic backends with different TLS options and performs a single ups
 ```bash
 docker build -t fastly-tls-flexi-repro .
 docker run --rm fastly-tls-flexi-repro
+
+# Online mode:
+docker run -e MODE=online -e TOKEN=your_token_here -e SID=compute_service_id -e DOMAIN=test_domain fastly-tls-flexi-repro
 ```
 
 The container uses pinned tooling from `package.json`:
