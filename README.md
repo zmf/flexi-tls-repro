@@ -39,7 +39,7 @@ docker run -e MODE=online -e TOKEN=your_token_here -e SID=compute_service_id -e 
 
 The container uses pinned tooling from `package.json`:
 
-- `@fastly/js-compute` `3.40.1`
+- `@fastly/js-compute` `3.41.0`
 - `@fastly/cli` `14.2.0`
 - `webpack` `5.99.9`
 - `webpack-cli` `5.1.4`
