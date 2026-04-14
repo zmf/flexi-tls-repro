@@ -9,7 +9,7 @@
     "run:repro": "./run-repro.sh"
   },
   "dependencies": {
-    "@fastly/js-compute": "3.40.1"
+    "@fastly/js-compute": "3.41.0"
   },
   "devDependencies": {
     "@fastly/cli": "14.2.0",

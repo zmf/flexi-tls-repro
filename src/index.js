@@ -96,8 +96,6 @@ async function runCase(caseName) {
     name: `repro-${caseName}`,
     target: `${cfg.host}:443`,
     useSSL: cfg.useSSL,
-    sniHostname: cfg.sniHostname,
-    certificateHostname: cfg.certificateHostname,
     connectTimeout: 10000,
     firstByteTimeout: 30000,
     betweenBytesTimeout: 30000,

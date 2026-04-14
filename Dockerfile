@@ -2,7 +2,6 @@ FROM node:20-bookworm-slim
 
 WORKDIR /app
 
-# Avoid npm update notifier noise in CI/repro output
 ENV NPM_CONFIG_UPDATE_NOTIFIER=false
 
 RUN apt-get update \
@@ -10,14 +9,17 @@ RUN apt-get update \
   && update-ca-certificates \
   && rm -rf /var/lib/apt/lists/*
 
+
 COPY package.json ./
 RUN npm install
 
 COPY fastly.toml ./
 COPY webpack.config.cjs ./
 COPY run-repro.sh ./
+COPY run-repro-online.sh ./
+COPY entrypoint.sh ./
 COPY src ./src
 
-RUN chmod +x /app/run-repro.sh
+RUN chmod +x /app/run-repro.sh /app/run-repro-online.sh /app/entrypoint.sh
 
-CMD ["./run-repro.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
